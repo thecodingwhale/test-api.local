@@ -11,6 +11,20 @@
 |
 */
 
+Route::get('/api/todo', function () {
+    $todos = [[
+        'id' => 0,
+        'text' => 'Use Redux',
+        'completed' => true,
+    ],[
+        'id' => 1,
+        'text' => 'Use React',
+        'completed' => false,
+    ]];
+    return response()->json($todos);
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
